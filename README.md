@@ -105,4 +105,16 @@ print(f"최댓값: {find_max(data)}") # 출력: 56
 <img width="229" height="33" alt="image" src="https://github.com/user-attachments/assets/a8949be9-9b29-4660-9df3-31773030d6c5" />
 
 * 알고리즘의 성능을 가장 정확하게 표현하고 싶을 때 사용함. 빅오와 빅오메가가 모두 같은 차수일 때만 빅세타라고 부를 수 있음
-   
+
+---
+### 리스트와 집합
+
+
+
+
+
+
+
+
+
+
