@@ -87,8 +87,9 @@ print(f"최댓값: {find_max(data)}") # 출력: 56
     *  데이터 개수가 n -> ∞로 갈 때 연산량이 늘어나는 '기울기'에 집중함
  <img width="250" height="250" alt="image" src="https://github.com/user-attachments/assets/309cc1fc-f53f-4b04-96cd-1d7628986944" />
 
-
-
+* 빅오표기법 : 입력값(n)이 무한히 커질 때, 내 코드가 얼마나 느려지는가를 나타내는 표기법. 알고리즘의 효율성을 측정하는 가장 대중적인 척도
+    * 상수항 무시
+    * 낮은 차수 무시
 
 
 
