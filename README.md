@@ -196,8 +196,56 @@ print(f"최댓값: {find_max(data)}") # 출력: 56
         * 괄호가 필요 없음 : 연산 순서가 이미 배치 순서에 결정되어 있어 괄호를 쓰지 않아도 혼동이 없음
         * 우선순위 고민x : 앞에서부터 차례대로 읽으면서 스택에 넣고 빼기만 하면 계산이 끝남
         * 컴퓨터 친화적 : 컴파일러가 수식을 처리할 때 가장 효율적인 방식
+    * 중위연산자->후위연산자로 바꿔주는 로직
+      ```
+         def infix_to_postfix(expression):
+       # 우선순위 설정
+       prec = {'*': 3, '/': 3, '+': 2, '-': 2, '(': 1}
+       stack = []
+       result = []
+    
+       for char in expression:
+           # 1. 숫자/문자인 경우
+           if char.isalnum():
+               result.append(char)
+           # 2. 여는 괄호인 경우
+           elif char == '(':
+               stack.append(char)
+           # 3. 닫는 괄호인 경우
+           elif char == ')':
+               while stack and stack[-1] != '(':
+                   result.append(stack.pop())
+               stack.pop() # '(' 제거
+           # 4. 연산자인 경우
+           else:
+               while stack and prec[stack[-1]] >= prec[char]:
+                   result.append(stack.pop())
+               stack.append(char)
+               
+       # 나머지 털어내기
+       while stack:
+           result.append(stack.pop())
+           
+       return "".join(result)
+   
+         # 테스트
+         print(infix_to_postfix("(A+B)*C")) # 출력: AB+C*
+      ```
+* 스택 응용
+    * 미로 탐색(깊이 우선 탐색) : **과제수행후 수정**   
 
+---
+### 큐
 
+* 큐(queue)
+    * 선입선출(FIFO)형태의 자료구조
+    * 큐 후단(rear)에서 삽입, 삭제는 전단(front)에서 수행하는 구조
+
+* 큐 활용 예
+    * 버퍼(buffer), 콜 큐(call queue)
+    * 인쇄 작업 큐
+    * 버퍼링(buffering)
+    * 시뮬레이션 
 
 
       
