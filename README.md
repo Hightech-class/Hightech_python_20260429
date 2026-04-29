@@ -85,7 +85,8 @@ print(f"최댓값: {find_max(data)}") # 출력: 56
 
 * 점근적 표기(Asymptotic notation) : 알고리즘의 효율성을 측정할 때, 입력 크기 n이 무한히 커짐에 따라 함수값이 어떻게 변하는지를 설명하는 수학적 표기법(수학의 극한개념과 유사함)
     *  데이터 개수가 n -> ∞로 갈 때 연산량이 늘어나는 '기울기'에 집중함
- 
+ <img width="250" height="250" alt="image" src="https://github.com/user-attachments/assets/309cc1fc-f53f-4b04-96cd-1d7628986944" />
+
 
 
 
