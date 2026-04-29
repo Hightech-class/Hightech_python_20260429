@@ -161,5 +161,41 @@ print(f"최댓값: {find_max(data)}") # 출력: 56
         * 수식 계산 과정 
     * 미로의 출구 찾기 
 
+* 스택 구현 방법
+    * 파이썬을 이용한 스택 ADT(오버플로(overflow), 언더플로(underflow)주의) 
+
+* 스택 응용
+    * 괄호 검사
+        * 괄호갯수는 짝수여야함
+        * 닫을때는 바로 앞에 여는 괄호가 있어야함
+    * 예시
+  ```
+  def check_brackets(expression):
+    stack = []
+    # 괄호 매칭을 위한 딕셔너리
+    mapping = {')': '(', '}': '{', ']': '['}
+
+    for char in expression:
+        if char in mapping.values():  # 여는 괄호인 경우
+            stack.append(char)
+        elif char in mapping.keys():  # 닫는 괄호인 경우
+            if not stack or stack.pop() != mapping[char]:
+                return False  # 짝이 맞지 않거나 스택이 빈 경우(언더플로 상황)
+                
+    return len(stack) == 0  # 마지막에 스택이 비어 있어야 True
+
+    # 테스트
+      print(check_brackets("({[]})"))  # True
+      print(check_brackets("({[})"))    # False
+    ```
+  
+* 수식계산
+
+
+
+
+
+
+
 
 
