@@ -29,9 +29,41 @@
     * 자연어
     * 흐름도(flowchart) 
     * 유사코드(pseudo-code) : 알고리즘의 논리적인 절차를 사람이 이해하기 쉽게 일상 언어로 요약해서 쓴 것(ex. 요리법을 적어둔 레시피)
-    * 프로그래밍언
 
+* 유사코드 예시
+```
+FUNCTION find_max(numbers):
+    1. 변수 max_val에 리스트의 첫 번째 요소를 할당한다.
+    2. 리스트의 두 번째 요소부터 끝까지 반복하며 다음을 수행한다:
+        A. 만약 현재 요소가 max_val보다 크다면:
+            - max_val을 현재 요소의 값으로 업데이트한다.
+    3. 반복이 종료되면 최종 max_val을 반환한다.
+END FUNCTION
+```
 
+* 유사코드를 파이썬으로 옮긴 코드
+```
+def find_max(numbers):
+    # 1. 초기값 설정
+    max_val = numbers[0]
+    
+    # 2. 반복 및 비교
+    for num in numbers[1:]:
+        if num > max_val:
+            max_val = num
+            
+    # 3. 결과 반환
+    return max_val
+
+# 테스트 코드
+data = [12, 45, 7, 23, 56, 10]
+print(f"최댓값: {find_max(data)}") # 출력: 56
+```
+
+---
+### 추상 자료형(Abstract Data Type, ADT)
+
+* 추상적으로 정의한 자료
 
 
 
